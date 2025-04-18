@@ -18,12 +18,12 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1  # 🔁 Update if needed
+          aws-region: eu-north-1  # 🔁 Update if needed
 
       - name: Setup kubectl
         uses: azure/setup-kubectl@v3
         with:
-          version: 'main'
+          version: 'latest'
 
       - name: Update kubeconfig
         run: |
