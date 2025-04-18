@@ -18,4 +18,3 @@ spec:
           image: iroshancodex/productservice:main
           ports:
             - containerPort: 4000
-          imagePullPolicy: Always
