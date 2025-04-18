@@ -1,9 +1,8 @@
 name: Deploy to EKS
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [trigger-deploy]
 
 jobs:
   deploy:
@@ -18,7 +17,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-north-1  # 🔁 Update if needed
+          aws-region: eu-north-1
 
       - name: Setup kubectl
         uses: azure/setup-kubectl@v3
