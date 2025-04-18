@@ -1,2 +1,8 @@
-# productservice-deployment
-Kubernetes deployment configurations for the Product Service microservice using AWS EKS and Docker Hub image.
+# Product Service Deployment
+
+This repo contains the Kubernetes manifests for deploying `iroshancodex/productservice` to AWS EKS.
+
+## Deployment Steps
+
+```bash
+./deploy.sh

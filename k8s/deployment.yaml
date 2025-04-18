@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productservice
+  namespace: product-ns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: productservice
+  template:
+    metadata:
+      labels:
+        app: productservice
+    spec:
+      containers:
+        - name: productservice
+          image: iroshancodex/productservice:latest
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
