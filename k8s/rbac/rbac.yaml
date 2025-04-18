@@ -5,7 +5,7 @@ metadata:
   namespace: product-ns
 subjects:
 - kind: User
-  name: "arn:aws:iam::259768585242:user/malith-dev"  # ✅ Use your full IAM user ARN here
+  name: "arn:aws:iam::259768585242:user/malith-dev"  # Replace with your full IAM user ARN
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
